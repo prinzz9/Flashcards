@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(12, 18, 112);
+    font-family: Bai jamjuree;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    position: fixed
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+}
+footer p
