@@ -15,7 +15,6 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  overflow-x: hidden;
 }
 
 @keyframes gradientMove {
@@ -30,46 +29,27 @@ h1 {
   text-align: center;
 }
 
-/* Container horizontal com scroll */
 .cards {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
   width: 100%;
-  max-width: 100vw;
-  -webkit-overflow-scrolling: touch; /* suaviza o scroll no iOS */
+  max-width: 1000px;
 }
 
-/* Estilo dos cards */
 .card {
-  flex: 0 0 300px; /* largura fixa de 300px, sem encolher */
-  height: 180px; /* altura maior */
   background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
   border-radius: 1rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s;
   user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
   backdrop-filter: blur(4px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .card:hover {
-  transform: scale(1.08);
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
-/* Remove scroll bar no Firefox */
-.cards {
-  scrollbar-width: none;
-}
-/* Remove scroll bar no Chrome/Safari */
-.cards::-webkit-scrollbar {
-  display: none;
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
 }
