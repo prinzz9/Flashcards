@@ -1,23 +1,17 @@
-criaCartao(
-    'Programação',
-    'O que é Python?',
-    'O Python é uma linguagem de programação'
-)
+const cards = document.querySelectorAll('.card');
 
-criaCartao(
-    'Geografia',
-    'Qual a capital da França?',
-    'A capital da França é Paris'
-)
+for (let i = 0; i < cards.length; i += 2) {
+  const question = cards[i];
+  const answer = cards[i + 1];
+  answer.style.display = 'none';
 
-criaCartao(
-    'Programação',
-    'O que é uma função?',
-    'Uma função é um bloco de código que executa alguma tarefa'
-)
+  question.addEventListener('click', () => {
+    question.style.display = 'none';
+    answer.style.display = 'flex';
+  });
 
-criaCartao(
-    'Lingua inglesa',
-    'Como se diz oi em Inglês?',
-    'Oi em ingles é HI (RAI)'
-)
+  answer.addEventListener('click', () => {
+    answer.style.display = 'none';
+    question.style.display = 'flex';
+  });
+}
