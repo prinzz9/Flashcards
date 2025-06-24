@@ -1,17 +1,7 @@
-const cards = document.querySelectorAll('.card');
+const cartoes = document.querySelectorAll('.cartao');
 
-for (let i = 0; i < cards.length; i += 2) {
-  const question = cards[i];
-  const answer = cards[i + 1];
-  answer.style.display = 'none';
-
-  question.addEventListener('click', () => {
-    question.style.display = 'none';
-    answer.style.display = 'flex';
+cartoes.forEach(cartao => {
+  cartao.addEventListener('click', () => {
+    cartao.classList.toggle('active');
   });
-
-  answer.addEventListener('click', () => {
-    answer.style.display = 'none';
-    question.style.display = 'flex';
-  });
-}
+});
